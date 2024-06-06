@@ -21,7 +21,7 @@ CONFIG=${1-swarco_linux_v3_ccm2200_defconfig}
 echo "Using Config: ${CONFIG}"
 
 make ${CONFIG}
-make -j
+make -j `nproc --all`
 
 (
     cd output/images
